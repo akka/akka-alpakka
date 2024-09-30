@@ -34,7 +34,7 @@ object SqsSource {
           ReceiveMessageRequest
             .builder()
             .queueUrl(queueUrl)
-            .attributeNamesWithStrings(settings.attributeNames.map(_.name).asJava)
+            .messageSystemAttributeNamesWithStrings(settings.attributeNames.map(_.name).asJava)
             .messageAttributeNames(settings.messageAttributeNames.map(_.name).asJava)
             .maxNumberOfMessages(settings.maxBatchSize)
             .waitTimeSeconds(settings.waitTimeSeconds)
