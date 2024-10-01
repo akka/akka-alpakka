@@ -8,7 +8,6 @@ import java.nio.file.{Path, Paths}
 import java.time.{Duration => JavaDuration}
 import java.util.concurrent.TimeUnit
 import java.util.{Objects, Optional}
-
 import akka.actor.{ActorSystem, ClassicActorSystemProvider}
 import akka.http.scaladsl.model.Uri
 import akka.stream.alpakka.s3.AccessStyle.{PathAccessStyle, VirtualHostAccessStyle}
@@ -17,6 +16,7 @@ import org.slf4j.LoggerFactory
 import software.amazon.awssdk.auth.credentials._
 import software.amazon.awssdk.regions.Region
 import software.amazon.awssdk.regions.providers._
+import software.amazon.awssdk.utils.builder.{CopyableBuilder, ToCopyableBuilder}
 
 import scala.jdk.OptionConverters._
 import scala.concurrent.duration._
@@ -596,7 +596,7 @@ object S3Settings {
             val aki = c.getString("aws.credentials.access-key-id")
             val sak = c.getString("aws.credentials.secret-access-key")
             val tokenPath = "aws.credentials.token"
-            val creds = if (c.hasPath(tokenPath)) {
+            val creds: AwsCredentials = if (c.hasPath(tokenPath)) {
               AwsSessionCredentials.create(aki, sak, c.getString(tokenPath))
             } else {
               AwsBasicCredentials.create(aki, sak)
