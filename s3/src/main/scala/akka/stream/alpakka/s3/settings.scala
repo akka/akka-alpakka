@@ -16,7 +16,6 @@ import org.slf4j.LoggerFactory
 import software.amazon.awssdk.auth.credentials._
 import software.amazon.awssdk.regions.Region
 import software.amazon.awssdk.regions.providers._
-import software.amazon.awssdk.utils.builder.{CopyableBuilder, ToCopyableBuilder}
 
 import scala.jdk.OptionConverters._
 import scala.concurrent.duration._
