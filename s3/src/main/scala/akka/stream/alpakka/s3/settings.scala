@@ -8,7 +8,6 @@ import java.nio.file.{Path, Paths}
 import java.time.{Duration => JavaDuration}
 import java.util.concurrent.TimeUnit
 import java.util.{Objects, Optional}
-
 import akka.actor.{ActorSystem, ClassicActorSystemProvider}
 import akka.http.scaladsl.model.Uri
 import akka.stream.alpakka.s3.AccessStyle.{PathAccessStyle, VirtualHostAccessStyle}
@@ -596,7 +595,7 @@ object S3Settings {
             val aki = c.getString("aws.credentials.access-key-id")
             val sak = c.getString("aws.credentials.secret-access-key")
             val tokenPath = "aws.credentials.token"
-            val creds = if (c.hasPath(tokenPath)) {
+            val creds: AwsCredentials = if (c.hasPath(tokenPath)) {
               AwsSessionCredentials.create(aki, sak, c.getString(tokenPath))
             } else {
               AwsBasicCredentials.create(aki, sak)
