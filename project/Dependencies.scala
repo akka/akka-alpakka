@@ -369,8 +369,8 @@ object Dependencies {
     libraryDependencies ++= Seq(
         "javax.jms" % "jms" % "1.1" % Provided, // CDDL + GPLv2
         "com.ibm.mq" % "com.ibm.mq.allclient" % "9.3.5.1" % Test, // IBM International Program License Agreement https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/messaging/mqdev/maven/licenses/L-APIG-AZYF2E/LI_en.html
-        "org.apache.activemq" % "activemq-broker" % "5.16.7" % Test, // ApacheV2
-        "org.apache.activemq" % "activemq-client" % "5.16.7" % Test, // ApacheV2
+        "org.apache.activemq" % "activemq-broker" % "5.18.6" % Test, // ApacheV2
+        "org.apache.activemq" % "activemq-client" % "5.18.6" % Test, // ApacheV2
         "io.github.sullis" %% "jms-testkit" % "1.0.4" % Test // ApacheV2
       ) ++ Mockito,
     // Having JBoss as a first resolver is a workaround for https://github.com/coursier/coursier/issues/200
