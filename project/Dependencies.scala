@@ -120,7 +120,7 @@ object Dependencies {
         "com.typesafe.akka" %% "akka-http" % AkkaHttpVersion,
         "com.typesafe.akka" %% "akka-http-xml" % AkkaHttpVersion,
         // for testing authorization signature
-        "com.azure" % "azure-storage-common" % "12.26.1" % Test,
+        "com.azure" % "azure-storage-common" % "12.28.0" % Test,
         wiremock
       )
   )
