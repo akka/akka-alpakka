@@ -89,7 +89,7 @@ object Dependencies {
 
   val Amqp = Seq(
     libraryDependencies ++= Seq(
-        "com.rabbitmq" % "amqp-client" % "5.21.0" // APLv2
+        "com.rabbitmq" % "amqp-client" % "5.24.0" // APLv2
       ) ++ Mockito
   )
 
