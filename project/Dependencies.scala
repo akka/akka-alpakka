@@ -17,7 +17,7 @@ object Dependencies {
   val AkkaVersion = "2.10.0"
   val AkkaBinaryVersion = VersionNumber(AkkaVersion).numbers match { case Seq(major, minor, _*) => s"$major.$minor" }
 
-  val InfluxDBJavaVersion = "2.15"
+  val InfluxDBJavaVersion = "2.24"
 
   val AwsSdk2Version = "2.25.16"
   val AwsSpiAkkaHttpVersion = "1.0.1"
