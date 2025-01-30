@@ -1,7 +1,7 @@
 resolvers += "Akka library repository".at("https://repo.akka.io/maven")
 
 addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.4.7")
-addSbtPlugin("com.github.sbt" % "sbt-ci-release" % "1.6.1")
+addSbtPlugin("com.github.sbt" % "sbt-ci-release" % "1.9.2")
 // discipline
 addSbtPlugin("de.heikoseeberger" % "sbt-header" % "5.10.0")
 addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.2")
