@@ -31,7 +31,7 @@ object Dependencies {
   val AlpakkaKafkaVersion = "7.0.0"
   val ScalaTestVersion = "3.2.19"
   val TestContainersScalaTestVersion = "0.40.3" // pulls Testcontainers 1.16.2
-  val mockitoVersion = "5.13.0" // check even https://github.com/scalatest/scalatestplus-mockito/releases
+  val mockitoVersion = "5.15.2" // check even https://github.com/scalatest/scalatestplus-mockito/releases
   val hoverflyVersion = "0.14.1"
 
   val CouchbaseVersion = "2.7.23"
