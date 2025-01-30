@@ -162,32 +162,6 @@ services:
 #      - "AUTH_HOST=http://ironauth:8090"
 #    ports:
 #      - "8080:8080"
-  kudu-master-data:
-    image: kunickiaj/kudu
-    volumes:
-      - /var/lib/kudu/master
-  kudu-tserver-data:
-    image: kunickiaj/kudu
-    volumes:
-      - kudu-tserver-data:/var/lib/kudu/tserver
-  kudu-master:
-    image: kunickiaj/kudu
-    ports:
-      - 7051:7051
-    volumes:
-      - kudu-tserver-data:/var/lib/kudu/tserver
-    command: master
-  kudu-tserver:
-    image: kunickiaj/kudu
-    environment:
-      - KUDU_MASTER=kudu-master
-    ports:
-      - 7050:7050
-    volumes:
-      - kudu-tserver-data:/var/lib/kudu/tserver
-    command: tserver
-    links:
-      - kudu-master
   mongo:
     image: mongo
     ports:
@@ -227,6 +201,3 @@ services:
       - 9090:9090
       - 12345:12345
     command: standalone
-
-volumes:
-  kudu-tserver-data:

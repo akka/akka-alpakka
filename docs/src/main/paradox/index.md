@@ -13,7 +13,6 @@ The [Alpakka project](https://doc.akka.io/libraries/alpakka/current/) is an init
 * [Apache Cassandra](cassandra.md)
 * [Apache Geode](geode.md)
 * [Apache Kafka](kafka.md)
-* [Apache Kudu](kudu.md)
 * [Apache Solr](solr.md)
 * [Avro Parquet](avroparquet.md)
 * [AWS EventBridge](aws-event-bridge.md)

@@ -1,2 +1,0 @@
-# Allow changes to impl
-ProblemFilters.exclude[Problem]("akka.stream.alpakka.kudu.impl.*")

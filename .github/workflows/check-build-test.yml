@@ -84,7 +84,6 @@ jobs:
           - { connector: jms,                          pre_cmd: 'docker compose up -d ibmmq' }
           - { connector: json-streaming }
           - { connector: kinesis }
-          - { connector: kudu,                         pre_cmd: 'docker compose up -d kudu-master-data kudu-tserver-data kudu-master kudu-tserver' }
           - { connector: mongodb,                      pre_cmd: 'docker compose up -d mongo' }
           - { connector: mqtt,                         pre_cmd: 'docker compose up -d mqtt' }
           - { connector: mqtt-streaming,               pre_cmd: 'docker compose up -d mqtt' }

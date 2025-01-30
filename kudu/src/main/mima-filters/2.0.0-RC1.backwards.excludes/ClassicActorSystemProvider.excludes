@@ -1,2 +1,0 @@
-# the get override required for Java users was missing
-ProblemFilters.exclude[IncompatibleResultTypeProblem]("akka.stream.alpakka.kudu.KuduClientExt.get")

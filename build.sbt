@@ -36,7 +36,6 @@ lazy val alpakka = project
     jms,
     jsonStreaming,
     kinesis,
-    kudu,
     mongodb,
     mqtt,
     mqttStreaming,
@@ -325,8 +324,6 @@ lazy val jsonStreaming = alpakkaProject("json-streaming", "json.streaming", Depe
 
 lazy val kinesis = alpakkaProject("kinesis", "aws.kinesis", Dependencies.Kinesis).settings(Scala3.settings)
 
-lazy val kudu = alpakkaProject("kudu", "kudu", Dependencies.Kudu, Scala3.settings)
-
 lazy val mongodb = alpakkaProject("mongodb", "mongodb", Dependencies.MongoDb)
 
 lazy val mqtt = alpakkaProject("mqtt", "mqtt", Dependencies.Mqtt, Scala3.settings)
@@ -464,7 +461,6 @@ lazy val docs = project
         "javadoc.jakarta.jms.base_url" -> "https://jakarta.ee/specifications/messaging/3.1/apidocs/jakarta.messaging/",
         "javadoc.jakarta.jms.link_style" -> "direct",
         "javadoc.com.couchbase.base_url" -> s"https://docs.couchbase.com/sdk-api/couchbase-java-client-${Dependencies.CouchbaseVersion}/",
-        "javadoc.org.apache.kudu.base_url" -> s"https://kudu.apache.org/releases/${Dependencies.KuduVersion}/apidocs/",
         "javadoc.org.apache.hadoop.base_url" -> s"https://hadoop.apache.org/docs/r${Dependencies.HadoopVersion}/api/",
         "javadoc.software.amazon.awssdk.base_url" -> "https://sdk.amazonaws.com/java/api/latest/",
         "javadoc.com.google.auth.base_url" -> "https://www.javadoc.io/doc/com.google.auth/google-auth-library-credentials/latest/",

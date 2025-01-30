@@ -35,7 +35,6 @@ dependency-change: "/project/Dependencies.scala"
 'p:jakarta-jms': ["/jakarta-jms"]
 'p:json-streaming': ["/json-streaming"]
 'p:kinesis': ["/kinesis"]
-'p:kudu': ["/kudu"]
 'p:mongodb': ["/mongodb"]
 'p:mqtt': ["/mqtt"]
 'p:mqtt-streaming': ["/mqtt-streaming", "/mqtt-streaming-bench"]

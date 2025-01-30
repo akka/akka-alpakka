@@ -10,9 +10,6 @@ changelog:
     - title: 'Apache HDFS'
       labels:
         - 'p:hdfs'
-    - title: 'Apache Kudu'
-      labels:
-        - 'p:kudu'
     - title: 'AvroParquet'
       labels:
         - 'p:avroparquet'
